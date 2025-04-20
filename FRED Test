@@ -1,0 +1,25 @@
+import fredapi
+
+# Replace with your actual FRED API key
+FRED_API_KEY = "696e77ed139b0a00d58206a6b8804a6b"
+
+# Initialize the Fred object
+fred = fredapi.Fred(api_key=FRED_API_KEY)
+
+# Example: Get GDP data
+gdp_data = fred.get_series('GDP')  # 'GDP' is the series ID for nominal GDP
+
+# Print the data
+print(gdp_data)
+
+# Example: Get series information
+series_info = fred.get_series_info('GDP')
+print(series_info)
+
+# Example: Get categories
+categories = fred.get_categories()
+print(categories)
+
+# Example: Search for series
+search_results = fred.search('inflation')
+print(search_results)
